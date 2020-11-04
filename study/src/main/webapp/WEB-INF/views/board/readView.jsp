@@ -22,9 +22,15 @@
 			
 			//삭제
 			$(".delete_btn").on("click", function(){
+				var deleteYN = confirm("삭제하시겠습니까?");
+				
+				if(deleteYN == true){
+					
 				formObj.attr("action", "/board/delete");
 				formObj.attr("method", "post");
 				formObj.submit();
+				
+				}
 			})
 		
 			//취소
@@ -40,9 +46,9 @@
 				<h1>게시판</h1>
 			</header>
 			
-			<nav>
-			홈 - 글 작성
-			</nav>
+			<div>
+			<%@include file="nav.jsp" %>
+			</div>
 			<hr />
 			<section id="container">
 				<form name="readForm" role="form" method="post">

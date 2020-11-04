@@ -13,9 +13,9 @@
 		</header>
 		<hr />
 		
-		<nav>
-		홈 - 글작성
-		</nav>
+		<div>
+			<%@include file="nav.jsp" %>
+		</div>
 		<hr />
 		
 		<section id="container">
