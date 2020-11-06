@@ -47,7 +47,7 @@
 			</header>
 			
 			<div>
-			<%@include file="nav.jsp" %>
+				<%@include file="nav.jsp" %>
 			</div>
 			<hr />
 			<section id="container">

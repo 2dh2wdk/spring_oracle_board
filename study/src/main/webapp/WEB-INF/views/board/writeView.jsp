@@ -8,7 +8,7 @@
 	<script type="text/javascript">
 			$(document).ready(function(){
 				var formObj = $("form[name='writeForm']");
-				$("".write_btn").on("click", function(){
+				$(".write_btn").on("click", function(){
 					if(fn_valiChk()){
 						return false;
 					}
@@ -18,9 +18,9 @@
 				});
 			})
 			function fn_valiChk(){
-				var regForm = $("form[name='writeForm'].chk").length;
+				var regForm = $("form[name='writeForm'] .chk").length;
 				for(var i = 0; i<regForm; i++){
-					if($(".chk").eq(i).val() == "" || $(".chk").eq(i).val()) == null){
+					if($(".chk").eq(i).val() == "" || $(".chk").eq(i).val() == null){
 						alert($(".chk").eq(i).attr("title"));
 						return true;
 					}	
@@ -35,11 +35,11 @@
 			<hr />
 			
 			<div>
-			<%@include file="nav.jsp" %>
+				<%@include file="nav.jsp" %>
 			</div>
 			
 			<section id="container">
-				<form role="writeform" method="post" action="/board/write">
+				<form name="writeForm" method="post" action="/board/write">
 					<table>
 						<tbody>
 							<tr>
@@ -59,7 +59,7 @@
 							<tr>
 							<tr>
 								<td>
-									<button type="submit">작성</button>
+									<button type="submit" class="write_btn">작성</button>
 								</td>
 							</tr>
 						</tbody>
